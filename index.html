@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数据加载</title>
+    <link rel="stylesheet" href="styleSheets/main.css">
+</head>
+<body>
+<main>
+    <div class="ctrlBtnGroup">
+        <button type="button" id="loadData">加载数据</button>
+        <button type="button" id="delCkdData">删除选中</button>
+    </div>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th class="ckb-all">
+                    <input type="checkbox" name="ckData">
+                </th>
+                <th>
+                    货号
+                    <i class="arrow normal"></i>
+                </th>
+                <th>名称</th>
+                <th>
+                    生产日期
+                    <i class="arrow normal"></i>
+                </th>
+                <th>
+                    进货日期
+                    <i class="arrow normal"></i>
+                </th>
+                <th>保质期</th>
+                <th>
+                    售价
+                    <i class="arrow normal"></i>
+                </th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <!--js加载部分-->
+        <tbody></tbody>
+    </table>
+</main>
+<!--弹出框-->
+<div id="Popup">
+    <div>
+        <p class="a">您确定要删除本行数据吗？</p>
+        <p><span id="Determine">确定</span>
+            <span id="cancel">取消</span></p>
+    </div>
+</div>
+<div id="LoadingEffect">
+    <div></div>
+</div>
+<script type="text/javascript" src="plugin/jquery.js"></script>
+<script type="text/javascript" src="javaScripts/main.js"></script>
+</body>
+</html>

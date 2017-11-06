@@ -1,0 +1,149 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+main{
+    width: 90%;
+    margin: 0 auto ;
+}
+.ctrlBtnGroup{
+    width: 40%;
+    padding: 6% 0 2% 0;
+}
+.ctrlBtnGroup button{
+    width: 35%;
+    font-size: 20px;
+    margin: 5% 7% 6% 0;
+    padding: 2px;
+    outline: none;
+    border:  1px solid #1d1618;
+    transition: all 0.3s linear;
+}
+.ctrlBtnGroup button:active{
+    background: #1714ff;
+    color: #fff;
+}
+#dataTable{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+tr,td,th{
+    border: 1px solid rgba(30, 65, 255, 0.56);
+}
+td,th{
+    padding: 2%;
+    font: normal 18px "微软雅黑";
+}
+thead tr{
+    background: #ff67af;
+}
+.delete{
+    color: #ff8080;
+    cursor: pointer;
+}
+.delete:hover{
+    color: #ff0a0a;
+}
+.decribe{
+    color: #76a2ff;
+    margin-right: 3px;
+    cursor: pointer;
+}
+.decribe:hover{
+    color:#135dfa;
+}
+i{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    transition-duration: 0.1s;
+    background: url(../images/arrow.png) no-repeat;
+}
+thead i.arrow.up{
+    transform: rotate(-90deg);
+}
+input,i{
+    cursor: pointer;
+}
+
+/*弹出框*/
+#Popup{
+    position: fixed;
+    right: 0;
+    top:0;
+    left: 0;
+    bottom: 0;
+    background: rgba(98, 95, 95, 0.59);
+    display: none;
+}
+#Popup div{
+    width: 400px;
+    height: 200px;
+    background: #c1ffe1;
+    text-align: center;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -100px;
+}
+#Popup div p{
+    height: 100px;
+    line-height: 100px;
+}
+#Popup div span{
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    background: #1eff16;
+    color: #1e1e1e;
+    border: 1px solid #eee;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+#Popup div span:hover{
+    background: #69ff6f;
+}
+#Popup div span:active{
+    background: #1622ff;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+}
+
+/*载入效果*/
+#LoadingEffect{
+    position: fixed;
+    right: 0;
+    left: 0;
+    top:0;
+    bottom: 0;
+    background: rgba(45, 41, 44, 0.53);
+    display: none;
+}
+#LoadingEffect div{
+    width: 68px;
+    height: 68px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -34px;
+    margin-top: -34px;
+    border-radius: 50%;
+    background: url(../images/loading.png) no-repeat;
+    animation: resizeWidth 1.2s linear;
+    animation-iteration-count:infinite ;
+}
+@keyframes resizeWidth{
+    from{transform: rotate(0deg)}
+    to{transform: rotate(360deg)}
+}
